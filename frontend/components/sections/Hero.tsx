@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, useAnimation, animate } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 import {
   ArrowRight,
   Calendar,
@@ -71,7 +72,7 @@ export function Hero() {
             Walk-ins Welcome Today
           </motion.div>
 
-          <h1 className="text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 text-foreground leading-[1.1]">
+          <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 text-foreground leading-[1.1]">
             Expert Care, <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-teal-500 to-blue-600">
               Near You.
@@ -83,14 +84,18 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button size="lg" className="rounded-full h-14 px-8 text-base shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-primary/30 hover:shadow-primary/50 transition-all gap-2 group">
-              <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform" />
-              Book Appointment
-            </Button>
-            <Button variant="outline" size="lg" className="rounded-full h-14 px-8 text-base bg-background/50 backdrop-blur-md border-border hover:bg-muted gap-2">
-              <Stethoscope className="w-5 h-5" />
-              Meet Our Doctors
-            </Button>
+            <Link href="/book">
+              <Button size="lg" className="w-full rounded-full h-14 px-8 text-base shadow-[0_8px_30px_rgb(0,0,0,0.12)] shadow-primary/30 hover:shadow-primary/50 transition-all gap-2 group">
+                <Calendar className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                Book Appointment
+              </Button>
+            </Link>
+            <Link href="/doctors">
+              <Button variant="outline" size="lg" className="w-full rounded-full h-14 px-8 text-base bg-background/50 backdrop-blur-md border-border hover:bg-muted gap-2">
+                <Stethoscope className="w-5 h-5" />
+                Meet Our Doctors
+              </Button>
+            </Link>
           </div>
 
           <div className="flex items-center gap-8 pt-6 border-t border-border/50">

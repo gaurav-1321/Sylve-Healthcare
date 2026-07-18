@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function Footer() {
   return (
     <footer className="bg-foreground text-background py-12">
@@ -7,25 +9,25 @@ export function Footer() {
             Sylve Health
           </h3>
           <p className="text-muted/60 text-sm">
-            Premium healthcare services tailored to your lifestyle. Book your consultation today.
+            Premium healthcare services tailored to your lifestyle. <Link href="/book" className="underline hover:text-white transition-colors">Book your consultation today.</Link>
           </p>
         </div>
         <div>
           <h4 className="font-semibold mb-4 text-white">Services</h4>
           <ul className="space-y-2 text-sm text-muted/60">
-            <li>Primary Care</li>
-            <li>Cardiology</li>
-            <li>Dermatology</li>
-            <li>Diagnostics</li>
+            <li><Link href="/services/primary-care" className="hover:text-white transition-colors">Primary Care</Link></li>
+            <li><Link href="/services/cardiology" className="hover:text-white transition-colors">Cardiology</Link></li>
+            <li><Link href="/services/dermatology" className="hover:text-white transition-colors">Dermatology</Link></li>
+            <li><Link href="/services/diagnostics" className="hover:text-white transition-colors">Diagnostics</Link></li>
           </ul>
         </div>
         <div>
           <h4 className="font-semibold mb-4 text-white">Company</h4>
           <ul className="space-y-2 text-sm text-muted/60">
-            <li>About Us</li>
-            <li>Our Doctors</li>
-            <li>Careers</li>
-            <li>Contact</li>
+            <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
+            <li><Link href="/doctors" className="hover:text-white transition-colors">Our Doctors</Link></li>
+            <li><Link href="/careers" className="hover:text-white transition-colors">Careers</Link></li>
+            <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
           </ul>
         </div>
         <div>

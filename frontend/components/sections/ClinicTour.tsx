@@ -137,7 +137,7 @@ const InteractiveHotspots = () => {
                   initial={{ opacity: 0, y: 10, scale: 0.9 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, y: 10, scale: 0.9 }}
-                  className="absolute top-10 -left-24 w-64 bg-background/95 backdrop-blur-xl p-4 rounded-xl shadow-2xl border border-border pointer-events-none"
+                  className="absolute top-10 left-1/2 -translate-x-1/2 w-64 bg-background/95 backdrop-blur-xl p-4 rounded-xl shadow-2xl border border-border pointer-events-none"
                 >
                   <div className="flex items-center gap-2 mb-2">
                     <div className="p-1.5 bg-primary/10 rounded-md">

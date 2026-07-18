@@ -97,10 +97,15 @@ export function DoctorsList() {
             </p>
 
             {/* Action */}
-            <div className="mt-6 pt-6 border-t border-border/50">
-              <Link href={`/doctors/${doctor.id}`} className="block w-full">
-                <Button className="w-full rounded-xl group/btn" variant="outline">
+            <div className="mt-6 pt-6 border-t border-border/50 flex gap-3">
+              <Link href={`/doctors/${doctor.id}`} className="flex-1">
+                <Button className="w-full rounded-xl" variant="outline">
                   View Portfolio
+                </Button>
+              </Link>
+              <Link href={`/book/${doctor.id}`} className="flex-1">
+                <Button className="w-full rounded-xl group/btn">
+                  Book
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1" />
                 </Button>
               </Link>
