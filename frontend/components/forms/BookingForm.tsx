@@ -199,7 +199,7 @@ export function BookingForm({ initialSpeciality = "", initialDoctor = "" }: Book
             </div>
           </div>
 
-          <hr className="border-border/50" />
+          <hr className="border-border/40" />
 
           {/* Date Selection */}
           <div>
