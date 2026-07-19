@@ -128,7 +128,7 @@ export function BookingForm({ initialSpeciality = "", initialDoctor = "" }: Book
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="text-sm font-semibold mb-2 flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> Email Address</label>
+                <label className="text-sm font-semibold mb-2 flex items-center gap-3"><Mail className="w-4 h-4 text-primary" /> Email Address</label>
                 <input
                   type="email"
                   value={patientEmail}

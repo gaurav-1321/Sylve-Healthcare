@@ -55,8 +55,9 @@ async function getDoctorData(id: string) {
 }
 
 // SEO Optimization for Individual Ranking
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const doctor = await getDoctorData(params.id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const resolvedParams = await params;
+  const doctor = await getDoctorData(resolvedParams.id);
   
   return {
     title: `${doctor.name} - Best ${doctor.specialty} in Pune | Sylve Health`,
@@ -77,8 +78,9 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-export default async function DoctorProfilePage({ params }: { params: { id: string } }) {
-  const doctor = await getDoctorData(params.id);
+export default async function DoctorProfilePage({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const doctor = await getDoctorData(resolvedParams.id);
 
   return (
     <div className="bg-background min-h-screen">
