@@ -193,7 +193,7 @@ export function BookingForm({ initialSpeciality = "", initialDoctor = "" }: Book
                   <option value="Dr. Michael Chen">Dr. Michael Chen</option>
                   <option value="Dr. Emily Williams">Dr. Emily Williams</option>
                   <option value="Dr. James Smith">Dr. James Smith</option>
-                  <option value="Dr. Robert Davis">Dr. Robert Davis</option>
+                  <option value="Dr. Robert Davis">Dr. Robert Deci</option>
                 </select>
               </div>
             </div>
