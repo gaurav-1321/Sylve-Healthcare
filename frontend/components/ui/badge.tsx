@@ -11,7 +11,7 @@ export const Badge = ({ children, className, variant = "default" }: { children: 
   };
 
   return (
-    <span className={cn("px-2.5 py-0.5 rounded-full text-xs font-semibold", variants[variant], className)}>
+    <span className={cn("px-2.5 py-0.6 rounded-full text-xs font-semibold", variants[variant], className)}>
       {children}
     </span>
   );
